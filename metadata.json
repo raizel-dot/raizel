@@ -1,0 +1,6 @@
+{
+  "name": "Nova AI",
+  "description": "High-performance AI chat interface with streaming responses and modern dark aesthetic.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

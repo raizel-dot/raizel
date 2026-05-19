@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-bg: #fbfaf8;
+  --color-brand-sidebar: #f3f1ed;
+  --color-brand-border: #e8e6e1;
+  --color-brand-accent: #d97706;
+  --color-brand-text: #1f1f1f;
+  --color-brand-accent-text: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-sans antialiased;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
+  }
+}
+
+.glass-morphism {
+  @apply backdrop-blur-xl border-t border-brand-border bg-brand-bg/80;
+}
+
+.message-bubble-user {
+  @apply bg-[#efeeea] text-brand-text rounded-2xl rounded-tr-none px-4 py-3 border border-brand-border;
+}
+
+.message-bubble-assistant {
+  @apply text-brand-text leading-relaxed px-4 py-3 max-w-full;
+}
